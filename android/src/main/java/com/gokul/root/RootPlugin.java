@@ -3,6 +3,7 @@ import androidx.annotation.NonNull;
 import java.util.List;
 import com.stericson.RootTools.RootTools;
 import com.topjohnwu.superuser.Shell;
+import android.os.Handler;
 import com.topjohnwu.superuser.ShellUtils;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.MethodCall;
