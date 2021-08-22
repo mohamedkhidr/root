@@ -27,6 +27,10 @@ public class RootPlugin implements FlutterPlugin, MethodCallHandler {
 
   @Override
   public void onMethodCall(@NonNull MethodCall call,@NonNull Result result) {
+    new Handler().post(new Runnable(){
+
+            @Override
+            public void run() {
     if (call.method.equals("ExecuteCommand")) {
        command=call.argument("cmd");
        resultText=Shell.sh(command).exec().getOut();
@@ -41,6 +45,8 @@ public class RootPlugin implements FlutterPlugin, MethodCallHandler {
     } else{
       result.notImplemented();
     }
+                }
+        });
 
 
   }
